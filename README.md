@@ -10,7 +10,7 @@ Add the dependency to your project:
 <dependency>
     <groupId>dev.ilyas</groupId>
     <artifactId>spring-jwt-auth</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
