@@ -1,6 +1,7 @@
 <!-- TOC -->
 * [Spring Jwt Auth](#spring-jwt-auth)
 * [Documentation](#documentation)
+  * [Getting Started](#getting-started)
   * [Generating Jwt Token](#generating-jwt-token)
   * [Getting authenticated user details](#getting-authenticated-user-details)
   * [Example](#example)
@@ -13,6 +14,7 @@ An opensource library to quickly implement JWT authentication in a spring boot a
 
 # Documentation
 
+## Getting Started
 Add the dependency to your project:
 
 ```xml
