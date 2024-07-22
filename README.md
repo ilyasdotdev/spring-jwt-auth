@@ -63,7 +63,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtHelper jwtH
 
 ## Documentation
 
-[Read complete documentation](https://ilyasdotdev.github.io/#/os/lib/spring-jwt-auth)
+[Read detailed documentation](https://ilyasdotdev.github.io/#/os/lib/spring-jwt-auth)
 
 ## Example
 
