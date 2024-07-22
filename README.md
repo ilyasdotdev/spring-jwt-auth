@@ -2,7 +2,7 @@
 
 An opensource library to quickly implement JWT authentication in a spring boot application.
 
-## Quick Start
+# Documentation
 
 Add the dependency to your project:
 
@@ -61,9 +61,42 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtHelper jwtH
 }
 ```
 
-## Documentation
+**Note:**
+- Change secret with your secret key string
+- Expiry unit could be any java ChronoUnit, see [ChronoUnit](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoUnit.html)
 
-[Read detailed documentation](https://ilyasdotdev.github.io/#/os/lib/spring-jwt-auth)
+**That's all, We have successfully secured our spring boot application by jwt authentication**
+
+## Generating Jwt Token
+To create an endpoint which returns jwt token, We can create simple rest controller.
+
+```java
+@RestController
+@RequiredArgsConstructor
+class AuthenticationController {
+
+    private final JwtHelper jwtHelper;
+
+    @GetMapping("/api/auth")
+    public String auth() {
+
+        JwtToken jwtToken = new JwtToken();
+        jwtToken.setUsername("test user");
+        jwtToken.setEmail("email@domain.com");
+        jwtToken.setRoles(List.of("USER", "ADMIN"));
+
+        return jwtHelper.serializeJwtToken(jwtToken);
+    }
+}
+```
+
+## Getting authenticated user details
+
+Once user is authenticated, we can get user details from jwt token.
+
+```java
+JwtToken token = (JwtToken) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+```
 
 ## Example
 
