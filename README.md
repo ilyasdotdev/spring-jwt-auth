@@ -19,7 +19,7 @@ Add the dependency to your project:
 
 ```xml
 <dependency>
-    <groupId>dev.ilyas</groupId>
+    <groupId>io.github.ilyasdotdev</groupId>
     <artifactId>spring-jwt-auth</artifactId>
     <version>1.1.0</version>
 </dependency>
